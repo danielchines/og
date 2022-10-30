@@ -4,6 +4,7 @@ import { deploymentURL } from '@/constant/env';
 
 export enum GeneralQueryEnum {
   'logo',
+  'logoDark',
   'siteName',
   'description',
   'theme',
@@ -18,6 +19,7 @@ export default withOGImage<'query', keyof typeof GeneralQueryEnum>({
       siteName,
       description,
       logo,
+      logoDark,
       theme,
       templateTitle,
       logoWidth,
@@ -27,6 +29,7 @@ export default withOGImage<'query', keyof typeof GeneralQueryEnum>({
         siteName: siteName ?? 'Site Name',
         description: description ?? 'Description',
         logo: logo ?? `${deploymentURL}/images/logo.jpg`,
+        logoDark: logoDark ?? `${deploymentURL}/images/logoDark.jpg`,
         theme: theme ?? 'dark',
         templateTitle,
         logoWidth: logoWidth ?? '100',
@@ -40,7 +43,9 @@ export default withOGImage<'query', keyof typeof GeneralQueryEnum>({
           </head>
           <body>
             <div class="container">
-              <img src="${query.logo}" alt="Favicon" />
+              <img src="${
+                theme == 'light' ? query.logo : query.logoDark
+              }" alt="Favicon" />
               ${
                 query.templateTitle
                   ? `<h1>${query.templateTitle}</h1>

@@ -4,6 +4,7 @@ import { deploymentURL } from '@/constant/env';
 
 enum QueryEnum {
   'logo',
+  'logoDark',
   'siteName',
   'description',
   'theme',
@@ -18,6 +19,7 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
       siteName,
       description,
       logo,
+      logoDark,
       theme,
       templateTitle,
       logoWidth,
@@ -27,6 +29,7 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
         siteName: siteName ?? 'Site Name',
         description: description ?? 'Description',
         logo: logo ?? `${deploymentURL}/images/logo.jpg`,
+        logoDark: logoDark ?? `${deploymentURL}/images/logoDark.jpg`,
         theme: theme ?? 'dark',
         templateTitle,
         logoWidth: logoWidth ?? '100',
@@ -40,21 +43,23 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
           </head>
           <body>
             <div class="container">
-              <img src="${query.logo}" alt="Favicon" />
-              ${
-                query.templateTitle
-                  ? `<h1>
+            <img src="${
+              query.theme == 'dark' ? query.logoDark : query.logo
+            }" alt="Favicon" />
+            ${
+              query.templateTitle
+                ? `<h1>
                   ${query.theme === 'dark' ? '<span class="gradient">' : ''}
                   ${query.templateTitle}
                   ${query.theme === 'dark' ? '</span>' : ''}
                   </h1>
                   <h3>${query.siteName}</h3>`
-                  : `<h1>
+                : `<h1>
                   ${query.theme === 'dark' ? '<span class="gradient">' : ''}
                   ${query.siteName}
                   ${query.theme === 'dark' ? '</span>' : ''}
                   </h1>`
-              }
+            }
               
               <p class="description">${query.description}</p>
             </div>

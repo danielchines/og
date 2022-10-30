@@ -31,7 +31,7 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
         logo: logo ?? `${deploymentURL}/images/logo.jpg`,
         theme: theme ?? 'dark',
         templateTitle,
-        logoWidth: logoWidth ?? '100',
+        logoWidth: logoWidth ?? '120',
         logoHeight,
         banner,
       };
