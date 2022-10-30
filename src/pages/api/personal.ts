@@ -103,7 +103,7 @@ const style = `
 
   header .gradient {
     color: #222;
-    background-image: linear-gradient(to top right, #00e887, #00E0F3);
+    background-image: linear-gradient(to top right, #8a5cf6, #6c28d9);
     margin-top: 0.5rem;
     padding: 0.4rem 1rem;
     font-weight: 700;
@@ -134,9 +134,9 @@ const style = `
     font-weight: 600;
     font-size: 1.5rem;
     background-image: linear-gradient(to top right,var(--tw-gradient-stops));
-    --tw-gradient-from: #00e887;
+    --tw-gradient-from: #8a5cf6;
     --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to,rgba(0,232,135,0));
-    --tw-gradient-to: #00e0f3;
+    --tw-gradient-to: #6c28d9;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
