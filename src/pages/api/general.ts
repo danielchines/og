@@ -26,8 +26,8 @@ export default withOGImage<'query', keyof typeof GeneralQueryEnum>({
       logoHeight,
     }) => {
       const query = {
-        siteName: siteName ?? 'Site Name',
-        description: description ?? 'Description',
+        siteName: siteName ?? 'Danny Hines',
+        description: description ?? '',
         logo: logo ?? `${deploymentURL}/images/logo.jpg`,
         logoDark: logoDark ?? `${deploymentURL}/images/logoDark.jpg`,
         theme: theme ?? 'dark',
