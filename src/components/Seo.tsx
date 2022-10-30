@@ -8,7 +8,7 @@ import { deploymentURL } from '@/constant/env';
 const defaultMeta = {
   title: 'Open Graph Generator',
   siteName: 'Open Graph Generator',
-  description: 'Made for personal use by Theodorus Clarence',
+  description: 'Made for personal use by Danny Hines',
   url: deploymentURL,
   image: `${deploymentURL}/images/logo.jpg`,
   type: 'website',
@@ -62,11 +62,7 @@ export default function Seo(props: SeoProps) {
             property='og:publish_date'
             content={meta.date}
           />
-          <meta
-            name='author'
-            property='article:author'
-            content='Theodorus Clarence'
-          />
+          <meta name='author' property='article:author' content='Danny Hines' />
         </>
       )}
 

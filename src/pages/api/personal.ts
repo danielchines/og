@@ -27,7 +27,7 @@ export default withOGImage<'query', keyof typeof query>({
                 <img src="${deploymentURL}/images/logo.jpg" alt="Favicon" />
                 <div class="right">
                   <h2>${query.type} by</h2>
-                  <p class="gradient">Theodorus Clarence</p>
+                  <p class="gradient">Danny Hines</p>
                 </div>
               </header>
               <h1>${query.title}</h1>
@@ -36,7 +36,7 @@ export default withOGImage<'query', keyof typeof query>({
                   ? `<p class="description">${query.description}</p>`
                   : ''
               }
-              <p class="site-name">theodorusclarence.com</p>
+              <p class="site-name">dannyhines.io</p>
             </div>
           </body>
         </html>
