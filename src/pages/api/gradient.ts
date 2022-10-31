@@ -26,8 +26,8 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
       logoHeight,
     }) => {
       const query = {
-        siteName: siteName ?? 'Site Name',
-        description: description ?? 'Description',
+        siteName: siteName ?? 'Danny Hines',
+        description: description,
         logo: logo ?? `${deploymentURL}/images/logo.jpg`,
         logoDark: logoDark ?? `${deploymentURL}/images/logoDark.jpg`,
         theme: theme ?? 'dark',
@@ -61,7 +61,11 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
                   </h1>`
             }
               
-              <p class="description">${query.description}</p>
+              ${
+                query.description
+                  ? `<p class="description">${query.description}</p>`
+                  : ``
+              }
             </div>
           </body>
         </html>
